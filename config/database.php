@@ -50,7 +50,7 @@ return [
             'url' => env('DATABASE_URL', $databaseUrl),
             'host' => env('DB_HOST', $databaseUrl['host']),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', substr($url["path"], 1)),
+            'database' => env('DB_DATABASE', substr($databaseUrl["path"], 1)),
             'username' => env('DB_USERNAME', $databaseUrl['user']),
             'password' => env('DB_PASSWORD', $databaseUrl['pass']),
             'unix_socket' => env('DB_SOCKET', ''),
