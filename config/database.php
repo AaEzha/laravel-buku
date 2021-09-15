@@ -45,12 +45,12 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'url' => env('DATABASE_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'url' => env('DATABASE_URL', 'https://akangprogrammer-laravel.herokuapp.com/'),
+            'host' => env('DB_HOST', 'us-cdbr-east-04.cleardb.com'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', ''),
+            'database' => env('DB_DATABASE', 'heroku_fdd55404b62b65a'),
+            'username' => env('DB_USERNAME', 'b0da36e9508f2b'),
+            'password' => env('DB_PASSWORD', '7bc50ca3'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
