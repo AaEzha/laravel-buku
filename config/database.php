@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Str;
 
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$host = $url["host"] ?? null;
+$username = $url["user"] ?? null;
+$password = $url["pass"] ?? null;
+$database = substr($url["path"], 1);
+
 return [
 
     /*
@@ -46,11 +52,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL', 'https://akangprogrammer-laravel.herokuapp.com/'),
-            'host' => env('DB_HOST', 'us-cdbr-east-04.cleardb.com'),
+            'host' => $host,
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'heroku_fdd55404b62b65a'),
-            'username' => env('DB_USERNAME', 'b0da36e9508f2b'),
-            'password' => env('DB_PASSWORD', '7bc50ca3'),
+            'database' => $database,
+            'username' => $username,
+            'password' => $password,
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
