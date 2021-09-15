@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', [BookController::class, 'index']);
+Route::get('/', [BookController::class, 'index']);
 
-Route::view('/', 'welcome');
+// Route::view('/', 'welcome');
 
 Route::resource('/book', BookController::class)->except(['show']);
 
