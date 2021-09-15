@@ -41,15 +41,6 @@
                                     placeholder="Tahun terbit">
                             </div>
 
-
-                            <div class="form-group">
-                                <label for="cover">Cover</label>
-                                <div class="custom-file">
-                                    <input type="file" name="cover" class="custom-file-input" id="cover" required>
-                                    <label class="custom-file-label" for="cover">Choose file</label>
-                                </div>
-                            </div>
-
                             <div class="form-group">
                                 <label for="sinopsis">Sinopsis</label>
                                 <textarea class="form-control" name="sinopsis" id="sinopsis" rows="3" required

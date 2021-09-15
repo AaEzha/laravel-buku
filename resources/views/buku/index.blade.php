@@ -26,7 +26,6 @@
                                     <th>Penulis</th>
                                     <th>Penerbit</th>
                                     <th>Tahun</th>
-                                    <th>Cover</th>
                                     <th>Sinopsis</th>
                                     <th colspan="2">#</th>
                                 </tr>
@@ -39,7 +38,6 @@
                                         <td>{{ $book->penulis }}</td>
                                         <td>{{ $book->penerbit }}</td>
                                         <td>{{ $book->tahun }}</td>
-                                        <td><img height="50" src="{{ asset($book->cover) }}" /></td>
                                         <td>{{ $book->sinopsis }}</td>
                                         <td>
                                             <a href="{{ route('book.edit', $book->id) }}" class="btn btn-primary btn-sm">Edit</a>

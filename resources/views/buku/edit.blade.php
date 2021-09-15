@@ -42,17 +42,6 @@
                                     placeholder="Tahun terbit" value="{{ $book->tahun }}">
                             </div>
 
-
-                            <div class="form-group">
-                                <label for="cover">Cover</label>
-                                <div class="custom-file">
-                                    <input type="file" name="cover" class="custom-file-input" id="cover">
-                                    <label class="custom-file-label" for="cover">Choose file</label>
-                                </div>
-
-                                <img height="100" src="{{ asset($book->cover) }}" />
-                            </div>
-
                             <div class="form-group">
                                 <label for="sinopsis">Sinopsis</label>
                                 <textarea class="form-control" name="sinopsis" id="sinopsis" rows="3" required

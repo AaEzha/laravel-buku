@@ -19,7 +19,6 @@ class CreateBooksTable extends Migration
             $table->string('penulis');
             $table->string('penerbit');
             $table->year('tahun');
-            $table->string('cover');
             $table->text('sinopsis');
             $table->timestamps();
         });

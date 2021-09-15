@@ -36,17 +36,12 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $cover = time() . '-' . $request->file('cover')->getClientOriginalName() . '.' . $request->file('cover')->extension();
-
-        $request->file('cover')->storeAs('public', $cover);
-
         $buku = new Book();
         $buku->judul = $request->judul;
         $buku->penulis = $request->penulis;
         $buku->penerbit = $request->penerbit;
         $buku->tahun = $request->tahun;
         $buku->sinopsis = $request->sinopsis;
-        $buku->cover = "storage/" . $cover;
         $buku->save();
 
         return redirect()->route('book.index')->with('status', 'Data berhasil disimpan');
@@ -83,13 +78,6 @@ class BookController extends Controller
      */
     public function update(Book $book, Request $request)
     {
-        if ($request->hasFile('cover')) {
-            $cover = time() . '-' . $request->file('cover')->getClientOriginalName() . '.' . $request->file('cover')->extension();
-            $request->file('cover')->storeAs('public', $cover);
-
-            $book->cover = "storage/" . $cover;
-        }
-
         $book->judul = $request->judul;
         $book->penulis = $request->penulis;
         $book->penerbit = $request->penerbit;
